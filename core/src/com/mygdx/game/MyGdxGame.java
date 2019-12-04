@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.guy.JSONException;
 import com.guy.JSONObject;
 import com.guy.NetTask;
 import com.guy.SocketIO;
@@ -80,7 +81,7 @@ public class MyGdxGame extends ApplicationAdapter {
 				try {
 					socketInterface.log("Pong!! " + data.get("value").toString(), true);
 					//Just a demo :)
-				} catch (Exception e) { //TODO JSONException
+				} catch (JSONException e) { //TODO JSONException
 					e.printStackTrace();
 				}
 			}

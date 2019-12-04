@@ -1,12 +1,10 @@
 package com.guy;
 
-
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.net.URISyntaxException;
 
 public class NonWebSocketInterface implements SocketIO {
@@ -31,11 +29,15 @@ public class NonWebSocketInterface implements SocketIO {
     }
 
     @Override
-    public void emit(String event, Object... args) throws JSONException {
-        JSONObject data = new JSONObject();
-        for(int i = 0; i < args.length-1; i+=2){
-            data.put((String)args[i], args[i+1]);
-        } socket.emit(event, data);
+    public void emit(String event, Object... args) throws com.guy.JSONException {
+        try {
+            JSONObject data = new JSONObject();
+            for (int i = 0; i < args.length - 1; i += 2) {
+                data.put((String) args[i], args[i + 1]);
+            } socket.emit(event, data);
+        } catch(JSONException e){
+            throw new com.guy.JSONException();
+        }
     }
 
     @Override

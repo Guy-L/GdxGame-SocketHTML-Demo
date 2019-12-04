@@ -1,6 +1,5 @@
 package com.guy;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class NonWebJSONObject implements com.guy.JSONObject{
@@ -11,37 +10,65 @@ public class NonWebJSONObject implements com.guy.JSONObject{
     }
 
     @Override
-    public Object get(String key) throws Exception {
-        return object.get(key);
+    public Object get(String key) throws JSONException {
+        try {
+            return object.get(key);
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 
     @Override
     public String getString(String key) throws JSONException {
-        return object.getString(key);
+        try {
+            return object.getString(key);
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 
     @Override
-    public double getDouble(String key) throws JSONException {
-        return object.getDouble(key);
+    public double getDouble(String key) throws com.guy.JSONException {
+        try {
+            return object.getDouble(key);
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 
     @Override
-    public boolean getBoolean(String key) throws JSONException {
-        return object.getBoolean(key);
+    public boolean getBoolean(String key) throws com.guy.JSONException {
+        try {
+            return object.getBoolean(key);
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 
     @Override
-    public int getInt(String key) throws JSONException {
-        return object.getInt(key);
+    public int getInt(String key) throws com.guy.JSONException {
+        try {
+            return object.getInt(key);
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 
     @Override
-    public long getLong(String key) throws JSONException {
-        return object.getLong(key);
+    public long getLong(String key) throws com.guy.JSONException {
+        try {
+            return object.getLong(key);
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 
     @Override
-    public float getFloat(String key) throws JSONException {
-        return ((Double)object.getDouble(key)).floatValue();
+    public float getFloat(String key) throws com.guy.JSONException {
+        try {
+            return ((Double)object.getDouble(key)).floatValue();
+        } catch (org.json.JSONException e) {
+            throw new JSONException();
+        }
     }
 }

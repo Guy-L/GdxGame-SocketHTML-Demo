@@ -12,37 +12,37 @@ public class WebJSONObject implements com.guy.JSONObject{
     }
 
     @Override
-    public Object get(String key) {
+    public Object get(String key) throws JSONException {
         return getNormalValue(jsObject.get(key));
     }
 
     @Override
-    public String getString(String key) {
+    public String getString(String key) throws JSONException {
         return jsObject.get(key).isString().stringValue();
     }
 
     @Override
-    public double getDouble(String key) {
+    public double getDouble(String key) throws JSONException {
         return jsObject.get(key).isNumber().doubleValue();
     }
 
     @Override
-    public boolean getBoolean(String key) {
+    public boolean getBoolean(String key) throws JSONException {
         return jsObject.get(key).isBoolean().booleanValue();
     }
 
     @Override
-    public int getInt(String key) {
+    public int getInt(String key) throws JSONException {
         return ((Double)jsObject.get(key).isNumber().doubleValue()).intValue();
     }
 
     @Override
-    public long getLong(String key) {
+    public long getLong(String key) throws JSONException {
         return ((Double)jsObject.get(key).isNumber().doubleValue()).longValue();
     }
 
     @Override
-    public float getFloat(String key) {
+    public float getFloat(String key) throws JSONException {
         return ((Double)jsObject.get(key).isNumber().doubleValue()).floatValue();
     }
 

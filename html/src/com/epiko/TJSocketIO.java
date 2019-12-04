@@ -38,7 +38,6 @@ public class TJSocketIO {
 
 			@Override
 			public void onResponse(TT respuesta) {
-				// TODO Auto-generated method stub
 				respuesta(res,respuesta);
 			}
 		});

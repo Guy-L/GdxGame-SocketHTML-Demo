@@ -28,4 +28,9 @@ public class WebJSONArray implements com.guy.JSONArray{
     public com.guy.JSONArray getJSONArray(int key) throws JSONException {
         return new WebJSONArray(object.get(key).isArray());
     }
+
+    @Override
+    public int size() {
+        return object.size();
+    }
 }

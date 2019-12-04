@@ -35,4 +35,9 @@ public class NonWebJSONArray implements com.guy.JSONArray{
             throw new JSONException();
         }
     }
+
+    @Override
+    public int size() {
+        return object.length();
+    }
 }

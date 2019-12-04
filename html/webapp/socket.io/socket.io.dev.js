@@ -313,7 +313,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * and the Firebug extension (any Firefox version) are known
 	 * to support "%c" CSS customizations.
 	 *
-	 * TODO: add a `localStorage` variable to explicitly enable/disable colors
+	 *
 	 */
 	
 	// eslint-disable-next-line complexity
@@ -1560,7 +1560,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * and the Firebug extension (any Firefox version) are known
 	 * to support "%c" CSS customizations.
 	 *
-	 * TODO: add a `localStorage` variable to explicitly enable/disable colors
+	 *
 	 */
 	
 	function useColors() {

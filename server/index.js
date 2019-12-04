@@ -13,7 +13,7 @@ io.on('connection', function(socket){
 	socket.on('myPing', function(data){
 	    console.log(data);
 	    data.value+=1;
-	    socket.emit('pong', data)
+	    socket.emit('pong', [data, " with added string :)"])
 	});
 
 	socket.on('disconnect', function(){

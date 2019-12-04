@@ -5,10 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.guy.JSONException;
-import com.guy.JSONObject;
-import com.guy.NetTask;
-import com.guy.SocketIO;
+import com.guy.*;
 
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -77,9 +74,9 @@ public class MyGdxGame extends ApplicationAdapter {
 		.on("pong", new NetTask() {
 			@Override
 			public void run(Object... args) {
-				final JSONObject data = (JSONObject) args[0];
+				final JSONArray data = (JSONArray) args[0];
 				try {
-					socketInterface.log("Pong!! " + data.get("value").toString(), true);
+					socketInterface.log("Pong!! " + (data.getJSONObject(0)).get("value").toString() + data.get(1), true);
 					//Just a demo :)
 				} catch (JSONException e) { //TODO JSONException
 					e.printStackTrace();

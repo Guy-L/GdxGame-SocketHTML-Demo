@@ -33,7 +33,16 @@ public class WebSocketInterface implements SocketIO {
                 socket.onSocket(event, new TJSocketIO.SocketHandler<JavaScriptObject>() {
                     @Override
                     public void onSocket(JavaScriptObject data) {
-                        task.run(new WebJSONObject(data));
+                        try {
+                            task.run(new WebJSONObject(data));
+                        } catch (ClassCastException e) {
+                            try { //This is a really bad way to do this, but the alternative would be overcomplicated.
+                                task.run(new WebJSONArray(data));
+                            } catch (Exception ex) {
+                                ex.printStackTrace();
+                                task.run();
+                            }
+                        }
                     }
                 });
             }

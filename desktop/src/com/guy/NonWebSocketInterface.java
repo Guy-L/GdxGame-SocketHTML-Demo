@@ -3,6 +3,7 @@ package com.guy;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.net.URISyntaxException;
@@ -21,9 +22,19 @@ public class NonWebSocketInterface implements SocketIO {
         socket.on(event, new Emitter.Listener() {
             @Override
             public void call(Object... args) {
-                if(args.length>0) { //TODO to be removed, handled by constructor
-                    task.run(new NonWebJSONObject((JSONObject)args[0]));
-                }
+                if(args.length > 0) {
+                    switch(args[0].getClass().getName()){
+                        case "org.json.JSONObject":
+                            task.run(new NonWebJSONObject((JSONObject)args[0]));
+                            break;
+                        case "org.json.JSONArray":
+                            task.run(new NonWebJSONArray((JSONArray) args[0]));
+                            break;
+
+                        default:
+                            task.run();
+                    }
+                } else {task.run();}
             }
         }); return this;
     }

@@ -14,8 +14,8 @@
 # What's Included
 ### The Basics:
 * *core/src/com/mygdx/game/* **MyGdxGame**
-    * The classic LibGDX main game class. <br>You'll find ~~helpful comments~~ *(soon)* and code 
-    very similar what you got following the tutorial. I invite you to take a good, long look at the
+    * The classic LibGDX main game class. <br>You'll find ~~helpful comments~~ *(60% done)* and code 
+    very similar to what you got while following the tutorial. I invite you to take a good, long look at the
      syntax of the Socket object you will interact with, as there are some slight differences. 
      Featured events: *"connect"*, *"socketID"*, and a bonus *"pong"* event further showcasing how 
      to retrieve sent data.

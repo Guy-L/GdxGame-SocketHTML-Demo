@@ -1,5 +1,5 @@
 # The Basic LibGDX Browser Game, Now with Socket.io
-###   Prologue
+### Prologue
 
  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
 
@@ -50,8 +50,22 @@
 
 # How to Set Up
 
+### Prerequisites
+
  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
 
+<br>
+
+### Debugging your game
+
+ ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
+
+<br>
+
+### Setting up for remote servers
+
+ ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
+ 
 <br><br>
 
 # Planned Features

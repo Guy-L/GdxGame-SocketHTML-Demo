@@ -23,7 +23,7 @@
 * *server/* **index.js**
     * The basic Node.JS server.<br> Nothing here you didn't see in the tutorial, but you'll also have to 
     look at this file to understand what's going on. Featured events: *"connection"*, *"socketID"*, 
-    *disconnect*, a bonus *"myPing"* (***fun fact***: *"ping"* is a reserved event name, so we can't use it).
+    "*disconnect*", a bonus *"myPing"* (***fun fact***: *"ping"* is a reserved event name, so we can't use it).
     
 <br>
 

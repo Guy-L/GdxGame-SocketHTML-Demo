@@ -30,7 +30,6 @@ public class MyGdxGame extends ApplicationAdapter {
 		} catch (Exception e) {
 			e.printStackTrace();
 			Gdx.app.exit(); //Close the game!
-			System.exit(0); //(if the above line somehow didn't work)
 		}
 	}
 

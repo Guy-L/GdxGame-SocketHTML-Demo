@@ -28,22 +28,22 @@
 <br>
 
 ### The Technical Stuff:
-* *core/src/com/guy* **Core Networking Classes**
+* *core/src/com/guy/* **Core Networking Classes**
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
     
-* *desktop/src/com/guy* **Desktop Implementation**
+* *desktop/src/com/guy/* **Desktop Implementation**
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
     
-* *html/src/com/guy* **HTML Implementation**
+* *html/src/com/guy/* **HTML Implementation**
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
     
-* *html/src/com/epiko* **TJSocketIO**
+* *html/src/com/epiko/* **TJSocketIO**
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
     
 * **build.gradle *&* GWT**
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
         
-* *html/webapp* **socket.io**
+* *html/webapp/* **socket.io**
     * This is where the Web game client stores the Socket.io JS build it's calling.
     
 <br><br>

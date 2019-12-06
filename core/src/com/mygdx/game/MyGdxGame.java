@@ -29,7 +29,8 @@ public class MyGdxGame extends ApplicationAdapter {
 			configSocketEvents();
 		} catch (Exception e) {
 			e.printStackTrace();
-			//todo Crash the game
+			Gdx.app.exit(); //Close the game!
+			System.exit(0); //(if the above line somehow didn't work)
 		}
 	}
 
@@ -53,7 +54,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		.on("connect", new NetTask() {
 			@Override
 			public void run(Object... args) {
-				//Your code here!
+				//Your connect code here!
 				socketInterface.log("SOCKET.IO: Connected!", true);
 			}
 		})
@@ -78,10 +79,13 @@ public class MyGdxGame extends ApplicationAdapter {
 				try {
 					socketInterface.log("Pong!! " + (data.getJSONObject(0)).get("value").toString() + data.get(1), true);
 					//Just a demo :)
-				} catch (JSONException e) { //TODO JSONException
+
+					//Are you getting a TypeCast exception when retrieving certain data?
+					//Try socketInterface.parseObject() or socketInterface.parseArray() !
+				} catch (JSONException e) {
 					e.printStackTrace();
 				}
 			}
-		});
+		}).confirm();
 	}
 }

@@ -5,45 +5,49 @@ import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONValue;
 
 public class WebJSONObject implements com.guy.JSONObject{
-    JSONObject jsObject;
+    JSONObject jsonObject;
 
     public WebJSONObject(JavaScriptObject jsValue) {
-        jsObject = new JSONObject(jsValue);
+        jsonObject = new JSONObject(jsValue);
+    }
+
+    public WebJSONObject(JSONObject jsonValue) {
+        jsonObject = jsonValue;
     }
 
     @Override
     public Object get(String key) throws JSONException {
-        return getNormalValue(jsObject.get(key));
+        return getNormalValue(jsonObject.get(key));
     }
 
     @Override
     public String getString(String key) throws JSONException {
-        return jsObject.get(key).isString().stringValue();
+        return jsonObject.get(key).isString().stringValue();
     }
 
     @Override
     public double getDouble(String key) throws JSONException {
-        return jsObject.get(key).isNumber().doubleValue();
+        return jsonObject.get(key).isNumber().doubleValue();
     }
 
     @Override
     public boolean getBoolean(String key) throws JSONException {
-        return jsObject.get(key).isBoolean().booleanValue();
+        return jsonObject.get(key).isBoolean().booleanValue();
     }
 
     @Override
     public int getInt(String key) throws JSONException {
-        return ((Double)jsObject.get(key).isNumber().doubleValue()).intValue();
+        return ((Double)jsonObject.get(key).isNumber().doubleValue()).intValue();
     }
 
     @Override
     public long getLong(String key) throws JSONException {
-        return ((Double)jsObject.get(key).isNumber().doubleValue()).longValue();
+        return ((Double)jsonObject.get(key).isNumber().doubleValue()).longValue();
     }
 
     @Override
     public float getFloat(String key) throws JSONException {
-        return ((Double)jsObject.get(key).isNumber().doubleValue()).floatValue();
+        return ((Double)jsonObject.get(key).isNumber().doubleValue()).floatValue();
     }
 
     private Object getNormalValue(JSONValue value){
@@ -59,7 +63,7 @@ public class WebJSONObject implements com.guy.JSONObject{
                 normalArray[i] = getNormalValue(value.isArray().get(i));
             } return normalArray;
         } else if(value.isObject() != null){
-            //Not sure what to do here yet.
+            return value.isObject();
         } return null;
     }
 

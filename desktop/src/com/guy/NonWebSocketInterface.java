@@ -40,6 +40,9 @@ public class NonWebSocketInterface implements SocketIO {
     }
 
     @Override
+    public void confirm() { }
+
+    @Override
     public void emit(String event, Object... args) throws com.guy.JSONException {
         try {
             JSONObject data = new JSONObject();
@@ -48,6 +51,24 @@ public class NonWebSocketInterface implements SocketIO {
             } socket.emit(event, data);
         } catch(JSONException e){
             throw new com.guy.JSONException();
+        }
+    }
+
+    @Override
+    public com.guy.JSONObject parseObject(String string) {
+        try {
+            return new NonWebJSONObject(new JSONObject(string));
+        } catch (JSONException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public com.guy.JSONArray parseArray(String string) {
+        try {
+            return new NonWebJSONArray(new JSONArray(string));
+        } catch (JSONException e) {
+            return null;
         }
     }
 

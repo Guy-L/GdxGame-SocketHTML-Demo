@@ -1,18 +1,18 @@
 # The Basic LibGDX Browser Game, Now with Socket.io
-###Prologue
+###   Prologue
 
  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
 
 <br>
 
-###Summary
+### Summary
 
  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
 
 <br><br>
 
-#What's Included
-###The Basics:
+# What's Included
+### The Basics:
 * *core/src/com/mygdx/game/* **MyGdxGame**
     * The classic LibGDX main game class. <br>You'll find ~~helpful comments~~ *(soon)* and code 
     very similar what you got following the tutorial. I invite you to take a good, long look at the
@@ -27,7 +27,7 @@
     
 <br>
 
-###The Technical Stuff:
+### The Technical Stuff:
 * *core/src/com/guy* **Core Networking Classes**
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
     
@@ -48,13 +48,13 @@
     
 <br><br>
 
-#How to Set Up
+# How to Set Up
 
  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
 
 <br><br>
 
-#Planned Features
+# Planned Features
 
  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TOWRITE`
 
